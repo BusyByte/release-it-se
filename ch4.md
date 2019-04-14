@@ -113,5 +113,81 @@ cascading failure in one layer causes cascading failure in another
   
 - defend with timeouts and circuit breaker  
 
+p51-71
+
+## Users
+
+## Traffic
+
+eventually surpass capacity
+
+how does system react to excessive demand
+
+capacity - maximum throughput system can sustain under given workload while maintaining acceptable performance
+
+## heap memory
+
+user session
+
+out of memory exception
+
+SoftReference in Java
+
+use open source caching lib that uses SoftReferenc
+
+don't put things in the session
+
+## off heap memory, off host memory
+
+memcached
+
+redis
+
+## sockets
+
+## closed sockets
+
+bogon - packet inefficiently routed arrives late, could be out of sequence, and possibly after the connection is closed
+
+turn TIME_WAIT down to reclaim ports
+
+## expensive to serve
+
+load test with double or triple proportion expensive transactions
+
+## unwanted users
+
+## session tracking
+
+competitive intelligence companies
+
+robots.txt
+
+# malicious users
+
+script kiddies
+
+botnets - compromised computers (and IoT devices)
+
+specialized circuit breaker
+
+network vendors all have products - run for month and learn normal traffic
+
+## remember this
+
+users consume memory
+
+users do weird, random things
+
+- fuzzing toolkits
+- property based testing
+- simulation testing
+
+# blocked threads
+
+
+ 
+ 
+
 
 
