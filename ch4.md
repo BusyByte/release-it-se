@@ -258,8 +258,9 @@ beware auto-scaling lag time
 - protect shared resources
 - expect rapid redistribution of any cool or valuable offer
 
- 
 
+finish chapter 4 
+lead next time
 
   
  
