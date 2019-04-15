@@ -133,7 +133,7 @@ out of memory exception
 
 SoftReference in Java
 
-use open source caching lib that uses SoftReferenc
+use open source caching lib that uses SoftReference
 
 don't put things in the session
 
