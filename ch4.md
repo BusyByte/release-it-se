@@ -250,7 +250,7 @@ share-nothing architecture
 
 set aside resources to handle surges
 
-beware auo-scaling lag time
+beware auto-scaling lag time
 
 ## remember this
 
