@@ -185,8 +185,83 @@ users do weird, random things
 
 # blocked threads
 
+business sponsor - is it generating revenue?
+ 
+client perspective
+
+counters
+ - successful logins
+ - failed credit cards
+ 
+- too many permutations to test
+- unexpected interactions
+- timing is crucial, probability goes up with number of concurrent requests
+- developers never hit their apps with 10,000 concurrent requests
+  
+use well crafted library
+
+domain objects immutable
+
+cqrs
+
+## spot the blocking
+
+cache call blocking
+
+synchronized - Liskov substitution principle violation
+
+caching proxy
+
+## use caching carefully
+
+config max memory
+
+keep track of cache hits
+
+avoid caching things cheap to generate
+
+weak references that get gc when memory needed
+
+invalidation strategy
+
+avoid database dogpile 
+
+## libraries
+
+## remember this
+
+- blocked threads anti-pattern is proximate cause of most failures
+- scrutinize resource pools
+- use proven primitives
+- defend with timeouts
+- beware of code you cannot see
+
+## self-denial attacks
+
+system or extended system, including humans conspire against itself
+
+marketing email for 10k users gets a million
+
+lock manager
+
+## avoiding self-denial
+
+share-nothing architecture
+
+set aside resources to handle surges
+
+beware auo-scaling lag time
+
+## remember this
+
+- keep the lines of communication open
+- protect shared resources
+- expect rapid redistribution of any cool or valuable offer
 
  
+
+
+  
  
 
 
