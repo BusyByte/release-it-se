@@ -335,13 +335,15 @@ dogpile can happen:
 
 ## Force Multiplier
 
-like a lever- large movements with less effort
+like a lever - large movements with less effort
 
 ## Outage Amplification
 
 empty caches dogpile database
 
 ## Controls and Safeguards
+
+2 points that could fail - expected and what it sees compared to reality
 
 ## Remember This
 
@@ -366,7 +368,7 @@ high cpu utilization - trying to gc
 
 ## Black Monday
 
-ten million rows in messge table supposed to be small
+ten million rows in message table supposed to be small
 
 ## Remember This
 
@@ -377,7 +379,8 @@ ten million rows in messge table supposed to be small
 
 ## Wrapping Up
 
-
+Ignacio - lead next time
+chapter 5 - beginning until let it crash
 
 
 
