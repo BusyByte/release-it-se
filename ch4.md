@@ -262,7 +262,111 @@ beware auto-scaling lag time
 finish chapter 4 
 lead next time
 
+## Scaling Effects
+
+dev and test envs rarely replicate production sizing 
+
+hard to see where scaling affects will bite you
+
+## Point to Point Communications
+
+replace point to point with
+- udp broadcasts
+- tcp or udp multi-cast
+- publish/subscribe messaging
+- message queues
+
+## Shared Resources
+
+`common services`
+
+most scalable architecture is `share-nothing` architecture
+
+scale linearly with number of services
+
+## Remember This
+
+- examine production vs QA envs to spot Scaling Effects
+- watch out for point to point communications
+- watch out for shared resources
+
+## Unbalanced Capacities
+
+front end overwhelm back end because capacities not balanced
+
+for the caller circuit breaker relieve pressure on downstream services
+
+for the server handshaking and back pressure to inform callers to throttle back on number of requests
+
+bulkheads to reserve capacity for high-priority callers of critical services
+
+## Drive Out Through Testing
+
+test harness
+
+double number of calls for normal workload
+
+fail fast - recover if load goes down
+
+autoscaling
+
+## Remember This
+
+- examine server and thread counts
+- observe near Scaling Effects and users
+- virtualize QA and scale it up
+- stress both sides of the interface
+  10 times the most expensive transaction
   
+## Dogpile
+
+outage causes excessive demand
+
+dogpile can happen:
+- booting up several servers
+- cron job triggers
+- config management pushes out a change
+
+## Remember This
+
+- dogpile forces you to spend too much to handle peak demand
+- use random clock skew to diffuse the demand
+- use increasing backoff times to avoid pulsing
+
+## Force Multiplier
+
+like a lever- large movements with less effort
+
+## Outage Amplification
+
+empty caches dogpile database
+
+## Controls and Safeguards
+
+## Remember This
+
+- ask for help before causing havoc
+- beware of lag time and momentum
+- beware of illusions and superstitions
+
+## Slow Responses
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+   
  
 
 
