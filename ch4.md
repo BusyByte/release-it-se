@@ -351,6 +351,34 @@ empty caches dogpile database
 
 ## Slow Responses
 
+usually from excessive demand
+
+high cpu utilization - trying to gc
+
+## Remember This
+
+- slow responses trigger cascading failures
+- for websites slower responses causes more traffic
+- consider fail fast
+- hunt for memory leaks and resource contention
+
+## Unbounded Result-Set
+
+## Black Monday
+
+ten million rows in messge table supposed to be small
+
+## Remember This
+
+- use realistic data volumes
+- paginate at the front end
+- don't rely on data producers
+- put limits into other application-level protocols
+
+## Wrapping Up
+
+
+
 
 
 
