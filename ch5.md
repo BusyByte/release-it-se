@@ -325,6 +325,68 @@ back pressure
 
 ## Create Back-Pressure
 
+unbounded queue can consume all available memory
+
+queue can also increase response time - Little's Law
+
+queue full:
+- pretend accept but drop on floor
+- accept and drop something else from queue on floor
+- refuse the item
+- block the produce until there is room in the queue
+
+tcp extra fields in packet to create back-pressure
+
+Rx, actors, or channels
+
+helps manage load when pool of clients is finite
+
+202 accepted rather than 503
+
+## Remember This
+
+- Back Pressure creates safety by slowing down consumers
+- Apply Back Pressure within a System Boundary
+- Queues must be finite for response times to be finite
+
+
+## Governor
+
+automation - repetitive tasks and fast response
+
+humans - perceive whole situation at higher level
+
+governor - limits speed of the engine
+
+prevents from running unsafe RPMs
+
+autoscaler - can only shut down a percentage at a time
+
+tension between definitions of `safe`
+
+u shape curve - go too far in either direction is bad
+
+outside range governor provides increased resistance
+
+slow down enough to get humans involved
+
+## Remember This
+
+- slow things down to allow intervention
+- apply resistance in the unsafe direction
+- consider a response curve
+
+## Wrapping Up
+
+- failure will happen
+- minimize damage
+- software that stays up
+- treat systems with distrust
+- paranoia is good engineering
+
+
+
+
 
 
   
