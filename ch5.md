@@ -179,6 +179,160 @@ fail fast improves stability by avoiding slow responses
 - reserve resources, verify integration points early
 - use for input validation
 
+## Let It Crash
+
+erlang world
+
+unable to test everything
+
+assume errors will happen
+
+most stable point is right after startup
+
+goal get back to clean startup as rapidly as possible
+
+## Limited Granularity
+
+erlang or elixir - boundary is the actor
+
+actor terminate without bringing down operating system process
+
+akka for java or scala
+
+in microservices architecture a whole instance of the service might be right granularity
+
+## Fast Replacement
+
+outage because all instances restarting
+
+actors 
+- restarts in milliseconds
+- clients unlikely to notice disruption
+
+go - startup new microservice in millis
+nodejs - new instance in millis
+java ee - minutes and is not right choice to let it crash and spin new one up
+
+## Supervision
+
+hierarchical restart managers
+
+restart one or all children
+
+restart with clean state
+
+supervisor must not be service consumer
+
+keep track how many times restarted
+
+PaaS environment will always restart regardless of if it will just crash again
+
+## Reintegration
+
+circuit breaker
+
+join pool and take work
+
+health checks and join when health with PaaS
+
+## Remember This
+
+- crash components to save systems
+- restart fast and re-integrate
+- isolate components to crash independently
+- don't crash monoliths
+
+## Handshaking
+
+server throttling it's own workload
+
+server reject incoming work
+
+health check and 503 "Not Available" when too much work
+
+circuit breaker - stop calling services that can not handshake
+
+## Remember This
+
+- create cooperative demand control
+- health checks
+- build handshaking into your own low-level protocols
+
+## Test Harnesses
+
+test harness to emulate remote system on the other end of integration point
+
+should be like real one instead of nice
+
+## Why Not Mock Objects?
+
+test harness substitutes for remote end of every web services call
+
+lots of failure conditions
+
+distinct categories: network transport problems, network protocol problems, application protocol problems, and 
+application logic problems
+
+test harness can be written at low level
+
+can act as a little hacker and break callers
+
+different ports for different behaviors
+
+log requests to indicate what broke the app
+
+leads toward chaos engineering
+
+## Remember This
+
+- emulate out-of-spec failures
+- stress the caller
+- leverage shared harness for common failures
+- supplement, don't replace other testing methods
+
+## Decoupling Middleware
+
+integrates and decouples systems
+
+rpc/http/mq
+
+## Remember This
+
+- decide at the last responsible moment
+- avoid many failure modes through total decoupling
+- learn many architectures and choose among them
+
+## Shed Load
+
+no difference between "really, really, slow" and "down"
+
+load too high, refuse requests
+
+service monitor sla 
+
+queue is similar but adds latency
+
+503 on health page
+
+back pressure
+
+## Remember This
+
+- you can't out scale the world
+  - need ability to shed load
+- avoid slow responses using shed load
+- use load balancers as shock absorbers
+
+## Create Back-Pressure
+
+
+
+  
+
+ 
+
+
+
 
 
   
