@@ -135,6 +135,7 @@ pushes complexity out of the boxes and into the control plane
 - are machines automatically set up and torn down?
 
  
-
+chapter 8 for next week
+Ignacio lead it
 
 
