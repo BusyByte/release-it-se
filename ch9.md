@@ -1,5 +1,7 @@
 # Interconnect
 
+Rating: Average
+
 - ops
 - control plane
 - interconnect
@@ -269,7 +271,7 @@ instances come together to form systems
 load balancing, routing, load shedding, and service discovery
 
 
-
+Ignacio volunteer lead next, ch10
 
 
 
